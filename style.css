@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+a {
+  color: #0077ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+#nav-links {
+  display: none;
+}
+
+#nav-links.open {
+  display: block;
+}
+html {
+  scroll-behavior: smooth;
+}
+@media (max-width: 600px) {
+  .cards {
+    flex-direction: column;
+  }
+}

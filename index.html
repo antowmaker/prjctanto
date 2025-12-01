@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style.css">
+<button id="menu-toggle">☰ Menu</button>
+<nav id="nav-links">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+  <meta charset="UTF-8" />
+  <title>My First Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Project Anto</h1>
+    <p>Welcome to my little corner of the internet.</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi! I'm learning how to build websites from scratch.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="card">
+      <h3>Project 1</h3>
+      <p>A cool thing I built (or plan to build) with HTML and CSS.</p>
+    </div>
+    <div class="card">
+      <h3>Project 2</h3>
+      <p>Another project goes here.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>You can reach me at: <a href="mailto:antoniomatic864.com">antoniomatic864@gmail.com</a></p>
+  </section>
+
+  <footer>
+    &copy; <span id="year"></span> AWeb
+  </footer>
+  <nav>
+  <button onclick="showHome()">Home</button>
+  <button onclick="showAbout()">About</button>
+</nav>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+<script src="script.js"></script>
+</html>
