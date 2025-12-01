@@ -65,20 +65,32 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Hi! I'm learning how to build websites from scratch.</p>
+    <p>Welcome. I'm learning how to build websites from scratch.</p>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
     <div class="card">
       <h3>Project 1</h3>
-      <p>A cool thing I built (or plan to build) with HTML and CSS.</p>
+      <p>A cool thing I built with JS, HTML and CSS.</p>
     </div>
     <div class="card">
       <h3>Project 2</h3>
-      <p>Another project goes here.</p>
+      <p>What do I plan next? More coming soon.</p>
     </div>
   </section>
+<div class="card" onclick="openModal()">
+  <h3>Project 3</h3>
+  <p>Click me.</p>
+</div>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Project 3</h2>
+    <p>More coming soon, request what would you love to see here.</p>
+  </div>
+</div>
 
   <section id="contact">
     <h2>Contact</h2>
@@ -96,6 +108,27 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <script>
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+  });
+</script>
+<script>
+  const fadeElements = document.querySelectorAll('.fade-in');
+
+  function checkFade() {
+    fadeElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        el.classList.add('show');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', checkFade);
+  window.addEventListener('load', checkFade);
+</script>
+<div class="fade-in">This appears smoothly</div>
 </body>
 <script src="script.js"></script>
 </html>
